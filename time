@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>my huge lobster</title>
+		<style>
+			body { margin: 0;}
+            #tex { 
+                position: absolute;
+                bottom: 40px;
+                width: 100%;
+                text-align: center;
+                z-index: 100;
+                display:block;
+                color: white;
+            }
+		</style>
+	</head>
+	<body>
+        <div id="tex">time passes</div>
+		<script src="js/three.js"></script>
+		<script>
+			const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+            camera.position.set(0, 0, 100);
+			const renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+
+			const geometry = new THREE.BoxGeometry();
+			const meshMaterial = new THREE.MeshBasicMaterial( { color: 0xFFAFFA } );
+			const lineMaterial = new THREE.LineBasicMaterial( { color: 0xFFEFFE } );
+            const cube = new THREE.Mesh( geometry, meshMaterial );
+            
+            const points = [];
+            points.push( new THREE.Vector3( - 10, 0, 0 ) );
+            points.push( new THREE.Vector3( 0, 10, 0 ) );
+            points.push( new THREE.Vector3( 10, 0, 0 ) );
+
+            const lineGeometry = new THREE.BufferGeometry().setFromPoints( points );
+            const line = new THREE.Line( lineGeometry, lineMaterial );			
+
+            scene.add( cube );
+            scene.add( line );
+
+            camera.position.z = 30;
+
+			const animate = function () {
+				requestAnimationFrame( animate );
+
+				cube.rotation.x += 0.005;
+                cube.rotation.y += 0.005;
+                line.rotation.x += 0.002;
+
+				renderer.render( scene, camera );
+			};
+
+			animate();
+		</script>
+	</body>
+</html>
