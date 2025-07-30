@@ -12,22 +12,32 @@
         body {
             color: #000;
             font-family: 'Mukta', sans-serif;
-            font-size: 9.696969rem;
-            margin-left:auto;
-            margin-right:auto;
+            font-size: 3.696969rem;
             text-align: center;
-            background-color: #FFF;
-            padding-top: 10rem;
+            background-color: rgb(211, 224, 243);
+            margin: 0;
         }
         .footer {
             height: 10px;
-            background-color: #EC0B43;
+            background-color: rgb(25, 30, 37);
             position: fixed;
             right: 0;
             bottom: 0;
             left: 0;
             padding: 1px;
         }
+        .topper {
+            height: 10px;
+            background-color: rgb(25, 30, 37);
+            position: fixed;
+            right: 0;
+            top: 0;
+            left: 0;
+            padding: 1px;
+        }
+
+
+        
         #a {
             color: #1D2F6F;
         }
@@ -55,13 +65,64 @@
         #help {
             font-size: 3.69rem;
         }
+
+        .flex-container {
+  
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; 
+            align-items: center;    
+
+            min-height: 100vh;
+            gap: 5px;
+            margin: 0;
+
+            .photo, .details {
+                width: 400px;
+            }
+
+            .photo {
+                height: 540px;
+            }
+
+            img {
+                width: 400px;
+            }
+
+            .subtext {
+                font-size: 40%;
+                padding-bottom: 12px;
+                padding-top:6px;
+            }
+
+            .location {
+                font-size: 40%;
+                line-height: 90%;
+            }
+        }
+
+        .flex-container > div{
+            padding: 8px;
+        }
+
+
     </style>
   </head>
-	<body>
-        <span id="a">i </span><span id="b">love </span><span id="u">you </span><span id="s"> wolvie</span><span id="h" > (abby)</span><br/>
-        <div id="help">
-            <span id="paren">0</span><span id="a">9</span><span id="h">/</span><span id="s">2</span><span id="b">6</span><span id="o">/</span><span id="s">2</span><span id="h">6</span><span id="paren">!</span>
+    <body>
+        <div class="topper"></div>
+        <div class="left"></div>
+        <div class="flex-container">
+            <div class="photo"><img src="./images/L1101907.jpeg"></div>
+            <div class="details">
+                <div class="subtext">SAVE THE DATE</div>
+                <div class="date">9/26/26</div>
+                <div class="subtext">Alex and Miller</div>
+                <div class="location">Inns of Aurora</div>
+                <div class="location">Aurora, NY</div>
+                <div class="subtext">Details forthcoming</div>
+            </div>
         </div>
-    <div class="footer"></div>
-	</body>
+        <div class="right"></div>
+        <div class="footer"></div>
+    </body>
 </html>
