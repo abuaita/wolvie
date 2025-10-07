@@ -1,0 +1,198 @@
+body {
+    color: #000;
+    font-family: 'Mukta', sans-serif;
+    font-size: 3.696969rem;
+    text-align: center;
+    margin: 0;
+    /* Balanced sunset over lake gradient background with water effects */
+    background: 
+        /* Water ripple effect - more visible */
+        radial-gradient(ellipse 1000px 250px at 30% 75%, rgba(255,255,255,0.25) 0%, transparent 60%),
+        radial-gradient(ellipse 800px 200px at 70% 80%, rgba(255,255,255,0.2) 0%, transparent 60%),
+        radial-gradient(ellipse 600px 150px at 50% 85%, rgba(255,255,255,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse 400px 100px at 20% 90%, rgba(255,255,255,0.1) 0%, transparent 60%),
+        /* Main sunset gradient */
+        linear-gradient(
+            to bottom,
+            #fef7f0 0%,      /* Warm cream (sky) */
+            #f4d5ae 20%,     /* Soft peach */
+            #e8b896 35%,     /* Gentle coral */
+            #d4a574 50%,     /* Muted gold (horizon) */
+            #a8b5c8 65%,     /* Soft blue-gray */
+            #7a9bc4 80%,     /* Gentle lake blue */
+            #5d7fa3 95%,     /* Deep lake blue */
+            #4a6b8a 100%     /* Deep water */
+        );
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+    min-height: 100vh;
+    -webkit-animation: gentleWaves 4s ease-in-out infinite alternate;
+    animation: gentleWaves 4s ease-in-out infinite alternate;
+    /* Safari compatibility - remove fixed attachment */
+}
+
+/* Minimalist Navigation */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.main-nav a:hover {
+    color: rgba(0, 0, 0, 1);
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Mobile responsive navigation */
+@media (max-width: 768px) {
+    .main-nav {
+        padding: 15px 0;
+    }
+    
+    .main-nav ul {
+        gap: 20px;
+    }
+    
+    .main-nav a {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav ul {
+        gap: 15px;
+    }
+    
+    .main-nav a {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+        letter-spacing: 0.5px;
+    }
+}
+
+
+#a {
+    color: #1D2F6F;
+}
+#b {
+    color: #8390FA;
+}
+#u {
+    color: #F45B69;
+}
+#s {
+    color: #84E296;
+}
+#h {
+    color: #B8336A;
+}
+#o {
+    color: #054A91;
+}
+#dash {
+    color: #B3FFB3;
+}
+#paren {
+    color: #33CFFF;
+}
+#help {
+    font-size: 3.69rem;
+}
+
+.flex-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;    
+
+    min-height: 100vh;
+    gap: 5px;
+    margin: 0;
+
+    .photo, .details {
+        width: 400px;
+    }
+
+    .photo {
+        height: 540px;
+    }
+
+    img {
+        width: 400px;
+    }
+
+    .subtext {
+        font-size: 40%;
+        padding-bottom: 12px;
+        padding-top:6px;
+    }
+
+    .location {
+        font-size: 40%;
+        line-height: 90%;
+    }
+}
+
+.flex-container > div{
+    padding: 8px;
+}
+
+/* Gentle water animation - Safari compatible */
+@-webkit-keyframes gentleWaves {
+    0% {
+        background-position: 0% 0%, 100% 0%, 0% 0%, 50% 0%, 0% 0%;
+    }
+    50% {
+        background-position: 50% 0%, 0% 0%, 100% 0%, 0% 0%, 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%, -50% 0%, 50% 0%, -50% 0%, 0% 0%;
+    }
+}
+
+@keyframes gentleWaves {
+    0% {
+        background-position: 0% 0%, 100% 0%, 0% 0%, 50% 0%, 0% 0%;
+    }
+    50% {
+        background-position: 50% 0%, 0% 0%, 100% 0%, 0% 0%, 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%, -50% 0%, 50% 0%, -50% 0%, 0% 0%;
+    }
+}

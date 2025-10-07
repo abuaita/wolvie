@@ -8,113 +8,20 @@
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet"> 
-    <style>
-        body {
-            color: #000;
-            font-family: 'Mukta', sans-serif;
-            font-size: 3.696969rem;
-            text-align: center;
-            background-color: rgb(211, 224, 243);
-            margin: 0;
-        }
-        .footer {
-            height: 10px;
-            background-color: rgb(25, 30, 37);
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            padding: 1px;
-        }
-        .topper {
-            height: 10px;
-            background-color: rgb(25, 30, 37);
-            position: fixed;
-            right: 0;
-            top: 0;
-            left: 0;
-            padding: 1px;
-        }
-
-
-        
-        #a {
-            color: #1D2F6F;
-        }
-        #b {
-            color: #8390FA;
-        }
-        #u {
-            color: #F45B69;
-        }
-        #s {
-            color: #84E296;
-        }
-        #h {
-            color: #B8336A;
-        }
-        #o {
-            color: #054A91;
-        }
-        #dash {
-            color: #B3FFB3;
-        }
-        #paren {
-            color: #33CFFF;
-        }
-        #help {
-            font-size: 3.69rem;
-        }
-
-        .flex-container {
-  
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center; 
-            align-items: center;    
-
-            min-height: 100vh;
-            gap: 5px;
-            margin: 0;
-
-            .photo, .details {
-                width: 400px;
-            }
-
-            .photo {
-                height: 540px;
-            }
-
-            img {
-                width: 400px;
-            }
-
-            .subtext {
-                font-size: 40%;
-                padding-bottom: 12px;
-                padding-top:6px;
-            }
-
-            .location {
-                font-size: 40%;
-                line-height: 90%;
-            }
-        }
-
-        .flex-container > div{
-            padding: 8px;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
     <body>
-        <div class="topper"></div>
-        <div class="left"></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/schedule">Schedule</a></li>
+                <li><a href="/faq">FAQ</a></li>
+            </ul>
+        </nav>
         <div class="flex-container">
             <div class="photo"><img src="./images/L1101907.jpeg"></div>
             <div class="details">
-                <div class="subtext">SAVE THE DATE</div>
+                <div class="subtext">SAVE THE WEEKEND</div>
                 <div class="date">9/26/26</div>
                 <div class="subtext">Alex and Miller</div>
                 <div class="location">Inns of Aurora</div>
@@ -122,7 +29,5 @@
                 <div class="subtext">Details forthcoming</div>
             </div>
         </div>
-        <div class="right"></div>
-        <div class="footer"></div>
     </body>
 </html>
