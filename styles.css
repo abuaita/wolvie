@@ -184,7 +184,6 @@ body {
     margin: 139px 0px 0px;
 
     .photo {
-        height: 580px;
         flex-basis: 100%; 
     }
 
@@ -195,6 +194,10 @@ body {
     img {
         width: 800px;
         border-radius: 10px;
+
+        @media (max-width: 480px) {
+            width: 100%;
+        }
     }
 
 
