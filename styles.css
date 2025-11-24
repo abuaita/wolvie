@@ -37,7 +37,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 20px 0;
+    padding: 16px 0;
     /*background: rgba(255, 255, 255, 0.1);*/
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -50,11 +50,11 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 40px;
 }
 
 .main-nav li {
     margin: 0;
+    padding: 0 0 20 20;
 }
 
 .main-nav a {
@@ -66,7 +66,7 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    padding: 8px 16px;
+    padding: 8px 26px;
     border-radius: 20px;
 }
 
@@ -170,6 +170,45 @@ body {
 
 .flex-container > div{
     padding: 8px;
+}
+
+.flex-container-b {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;    
+
+    min-height: 100vh;
+    gap: 5px;
+    margin: 139px 0px 0px;
+
+    .photo {
+        height: 580px;
+        flex-basis: 100%; 
+    }
+
+    .details {
+        height: 400px;
+    }
+
+    img {
+        width: 800px;
+        border-radius: 10px;
+    }
+
+
+
+    .subtext {
+        font-size: 40%;
+        padding-bottom: 12px;
+        padding-top:6px;
+    }
+
+    .location {
+        font-size: 40%;
+        line-height: 90%;
+    }
 }
 
 /* Gentle water animation - Safari compatible */
