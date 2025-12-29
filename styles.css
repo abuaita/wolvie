@@ -267,7 +267,7 @@ body {
 .flex-container-contact .contact-form {
     width: 100%;
     max-width: 640px;
-    height: 1350px;
+    height: 1150px;
     border: none;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.95);
@@ -295,7 +295,7 @@ body {
     }
     
     .flex-container-contact .contact-form {
-        height: 1350px;
+        height: 1150px;
     }
 }
 
