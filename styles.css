@@ -214,6 +214,107 @@ body {
     }
 }
 
+
+
+/* Contact page two-column layout */
+.flex-container-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: flex-start;    
+    min-height: 100vh;
+    gap: 40px;
+    margin: 139px auto 0px;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.flex-container-contact .contact-title {
+    flex-basis: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.flex-container-contact .photo-column {
+    flex: 0 1 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container-contact .photo-column img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.flex-container-contact .form-column {
+    flex: 0 1 500px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-container-contact .contact-form {
+    width: 100%;
+    max-width: 640px;
+    height: 650px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Mobile responsive for contact page */
+@media (max-width: 968px) {
+    .flex-container-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 100px;
+    }
+    
+    .flex-container-contact .photo-column {
+        flex: 1 1 100%;
+        max-width: 500px;
+    }
+    
+    .flex-container-contact .form-column {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+    
+    .flex-container-contact .contact-form {
+        height: 700px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flex-container-contact {
+        padding: 10px;
+        margin-top: 80px;
+    }
+    
+    .flex-container-contact .photo-column img {
+        border-radius: 8px;
+    }
+    
+    .flex-container-contact .contact-title {
+        font-size: 1.2rem;
+        padding-bottom: 15px;
+    }
+    
+    .flex-container-contact .contact-form {
+        border-radius: 8px;
+    }
+}
+
 /* Gentle water animation - Safari compatible */
 @-webkit-keyframes gentleWaves {
     0% {
