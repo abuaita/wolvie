@@ -235,6 +235,10 @@ body {
     text-align: center;
     padding-bottom: 20px;
     width: 100%;
+
+    @media (max-width: 480px) {
+        margin-top: 70px;
+    }
 }
 
 .flex-container-contact .photo-column {
