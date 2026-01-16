@@ -457,7 +457,7 @@ body {
 .faq-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 30px;
+    gap: 60px 30px;
     align-items: stretch;
 }
 
@@ -498,6 +498,15 @@ body {
 
 .faq-answer p {
     margin: 0;
+}
+
+/* FAQ Full Width Item - spans both columns */
+.faq-item-full {
+    grid-column: 1 / -1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 23px 40px;
 }
 
 /* FAQ Image Styling */
@@ -586,7 +595,7 @@ body {
 
     .faq-container {
         margin: 90px auto 30px;
-        padding: 20px 15px;
+        padding: 60px 15px;
     }
 
     .faq-header {
