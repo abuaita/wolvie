@@ -214,6 +214,10 @@ body {
     }
 }
 
+#regrets > .flex-container-contact {
+    margin: 80px auto 0px;
+
+}
 
 
 /* Contact page two-column layout */
@@ -224,7 +228,7 @@ body {
     align-items: flex-start;    
     min-height: 100vh;
     gap: 40px;
-    margin: 139px auto 0px;
+    margin: 80px auto 0px;
     padding: 20px;
     max-width: 1200px;
 }
@@ -268,6 +272,18 @@ body {
     width: 100%;
     max-width: 640px;
     height: 1150px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+
+.flex-container-contact .rsvp-form {
+    width: 100%;
+    max-width: 640px;
+    height: 675px;
     border: none;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.95);
