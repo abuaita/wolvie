@@ -13,6 +13,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        background: linear-gradient(135deg, #fef7f0 0%, #f4d5ae 25%, #e8b896 50%, #a8b5c8 75%, #7a9bc4 100%) !important;
+        background-size: cover !important;
+        -webkit-animation: none !important;
+        animation: none !important;
+      }
+      #my-rsvp {
+        background: linear-gradient(135deg, #fef7f0 0%, #f4d5ae 25%, #e8b896 50%, #a8b5c8 75%, #7a9bc4 100%) !important;
+      }
+      #my-rsvp label,
+      #my-rsvp * {
+        text-align: left !important;
+      }
+      #my-rsvp .rsvp-title,
+      #my-rsvp .rsvp-date {
+        color: rgba(0,0,0,0.85) !important;
+      }
+    </style>
   </head>
     <body>
         <nav class="main-nav">
@@ -24,17 +43,32 @@
                 <li><a href="/rsvp">RSVP</a></li>
             </ul>
         </nav>
-        </nav>
         <h1 style="text-align:center; font-family:'PT Serif',serif; font-size:2.5rem; margin-top:120px; margin-bottom:30px; font-weight:400; letter-spacing:0.5px; padding-top:30px">RSVP</h1>
-        <div style="max-width: 1040px; margin: 0 auto 40px auto; padding: 0 20px; padding-top:16px;" id="regrets">
-            <div class="editorial-content" style="padding-bottom:16px; padding-top:16px">
-                <p>Details on how to RSVP for the wedding will be in your formal invitation in the summer. That said, because we are arranging accomodations if you know you <b>can&apos;t</b> make it, please let us know now below.</p>
+        <div id="regrets" style="max-width: 1040px; margin: 0 auto 40px auto; padding: 0 24px; padding-top:16px;">
+            <div class="editorial-content" style="max-width:760px; margin:0 auto; text-align:center; padding-bottom:16px; padding-top:16px">
+                <p>Please RSVP by July 31st!</p>
             </div>
             <div class="flex-container-contact">
-                <div class="photo-column"><img src="./images/greenpoint-engagement-mary-dougherty-am133.jpeg"></div>
-                <div class="form-column">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZx8slE53uOMOcoZhIE-aRpLlqcVTAn3PnpXbQlY5U5Uksug/viewform?embedded=true" class="rsvp-form" frameborder="0" marginheight="0" marginwidth="0" height="675">Loading…</iframe>
+                <div class="photo-column">
+                    <img src="./images/rsvp-photo.jpg" width="1200" height="1791" alt="Alex and Miller toasting" loading="lazy">
                 </div>
+                <div class="form-column">
+                    <div id="rsvp-widget"></div>
+                    <script>
+                        (function (w, d, s, o, f, js, fjs) {
+                            w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+                            js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+                            js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+                        }(window, document, 'script', 'oursvp', 'https://www.oursvp.app/widget/widget.js'));
+                        oursvp('init', {
+                            element: document.getElementById('rsvp-widget'),
+                            eventId: 'ijKXQLOliVOy9n8AgO1w',
+                            showBackBtn: true,
+                            language: 'english'
+                        });
+                    </script>
+                </div>
+            </div>
         </div>
 
     </body>

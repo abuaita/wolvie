@@ -215,9 +215,11 @@ body {
 }
 
 #regrets > .flex-container-contact {
-    margin: 80px auto 0px;
-
+    margin: 2px auto 60px;
+    min-height: auto;
+    align-items: flex-start;
 }
+
 
 
 /* Contact page two-column layout */
@@ -280,15 +282,43 @@ body {
 }
 
 
-.flex-container-contact .rsvp-form {
+#regrets > .rsvp-form {
     width: 100%;
     max-width: 640px;
-    height: 675px;
     border: none;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+}
+
+/* RSVP widget: oursvp survey renders at 480px (448px card + 16px px-4 each side) */
+#regrets > .flex-container-contact {
+    gap: 24px;
+}
+
+#regrets .flex-container-contact .form-column {
+    flex: 0 0 480px;
+    min-width: 0;
+    align-items: stretch;
+}
+
+#regrets .flex-container-contact .form-column #rsvp-widget {
+    width: 100%;
+    max-width: 480px;
+    min-height: 480px;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1rem;
+    text-align: left;
+}
+
+#regrets .flex-container-contact .form-column #rsvp-widget iframe {
+    width: 100% !important;
+    border: none;
 }
 
 /* Mobile responsive for contact page */
@@ -298,6 +328,10 @@ body {
         align-items: center;
         gap: 30px;
         margin-top: 100px;
+    }
+
+    #regrets .flex-container-contact .form-column #rsvp-widget {
+        max-width: 100%;
     }
     
     .flex-container-contact .photo-column {
